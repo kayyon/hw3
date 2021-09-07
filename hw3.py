@@ -5,7 +5,7 @@
 import csv
 import json
 
-#1) FizzBuzz Game
+e
 for i in range(100):
 
     # Fizz function
@@ -20,6 +20,8 @@ for i in range(100):
 
     print(i)
 
+# ------------
+
 #2) Volume of Sphere
 PI = 3.14159
 print("Please input a number for radius ")
@@ -28,6 +30,8 @@ radius = int(radius)
 v = 4.0/3.0 * PI * radius**3
 
 print("The volume of your sphere is ", v)
+
+# ------------
 
 #3) CSV Writing
 FIELDS = ['Title', 'Author', 'ISBN13', 'Pages']
@@ -40,12 +44,16 @@ with open('books.csv', encoding = 'utf-8') as csvfile:
     bookwriter.writerow(FIELDS)
     bookwriter.writerows(ROWS)
 
+# ------------
+
 #4) CSV Return Dictonary Map
 mydict = [{'1234': '5678', '4321': '8765', '2341': '6785'}]
 with open('books.csv', encoding = 'utf-8') as csvfile:
     bookwriter = csv.DictWriter(csvfile, fieldnames = FIELDS)
     bookwriter.writerow(FIELDS)
     bookwriter.writerows(mydict)
+
+# ------------
 
 #5) Function Testing and Tempfiles
 temp = tempfile.mkdtemp()
